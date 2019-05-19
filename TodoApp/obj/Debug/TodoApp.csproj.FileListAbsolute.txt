@@ -80,3 +80,10 @@ C:\Users\MIRZA\source\repos\TodoApp\TodoApp\obj\Debug\TodoApp.csproj.CoreCompile
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\obj\Debug\TodoApp.csproj.CopyComplete
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\obj\Debug\TodoApp.dll
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\obj\Debug\TodoApp.pdb
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\DAL.dll
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\EntityFramework.dll
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\EntityFramework.SqlServer.dll
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\DAL.pdb
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\DAL.dll.config
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\EntityFramework.xml
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\EntityFramework.SqlServer.xml

@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
-using TodoApp.Models;
+using DAL;
 
 namespace TodoApp.Controllers
 {
@@ -14,14 +13,20 @@ namespace TodoApp.Controllers
 		List<string> todos = new List<string>();
 
 
-        public IEnumerable<string> GetAllTodos()
+        public IEnumerable<Todo> GetAllTodos()
         {
-            return todos;
+			using(TodoAppEntities entities = new TodoAppEntities()) {
+				return entities.Todos.ToList();
+			}
+				
         }
 
-		public string GetOneTodo(int id)
+		public Todo GetOneTodo(int id)
 		{
-			return todos[id];
+			using(TodoAppEntities entities = new TodoAppEntities())
+			{
+				return entities.Todos.FirstOrDefault(todo => todo.id == id);
+			}
 		} 
 
 		public IHttpActionResult AddTodo([FromBody] string text)

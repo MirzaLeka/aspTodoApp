@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TodoAppModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'TodoApp.dbo.Todos' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Todos">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="todo_text" Type="text" />
+    <Property Name="completed" Type="bit" />
+    <Property Name="completed_at" Type="date" />
+  </EntityType>
+  <EntityContainer Name="TodoAppModelStoreContainer">
+    <EntitySet Name="Todos" EntityType="Self.Todos" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Todos].[id] AS [id], 
+    [Todos].[todo_text] AS [todo_text], 
+    [Todos].[completed] AS [completed], 
+    [Todos].[completed_at] AS [completed_at]
+    FROM [dbo].[Todos] AS [Todos]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
