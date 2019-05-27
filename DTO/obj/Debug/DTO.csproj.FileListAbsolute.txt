@@ -1,0 +1,6 @@
+C:\Users\MIRZA\source\repos\TodoApp\DTO\bin\Debug\DTO.dll
+C:\Users\MIRZA\source\repos\TodoApp\DTO\bin\Debug\DTO.pdb
+C:\Users\MIRZA\source\repos\TodoApp\DTO\obj\Debug\DTO.csprojAssemblyReference.cache
+C:\Users\MIRZA\source\repos\TodoApp\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\MIRZA\source\repos\TodoApp\DTO\obj\Debug\DTO.dll
+C:\Users\MIRZA\source\repos\TodoApp\DTO\obj\Debug\DTO.pdb

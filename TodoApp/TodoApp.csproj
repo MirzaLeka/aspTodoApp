@@ -170,9 +170,17 @@
     <Folder Include="Views\Todo\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{f5a40a9c-9013-44c8-8cd0-ac8693ca3ac2}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{2c3e90c1-ef40-415b-8a59-02d7caafc3b1}</Project>
       <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{d31f9f9d-464b-46dc-b87a-771a0eab375f}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

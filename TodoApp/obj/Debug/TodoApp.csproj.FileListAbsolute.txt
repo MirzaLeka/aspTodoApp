@@ -87,3 +87,7 @@ C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\DAL.pdb
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\DAL.dll.config
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\EntityFramework.xml
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\EntityFramework.SqlServer.xml
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\BLL.dll
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\DTO.dll
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\BLL.pdb
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\DTO.pdb

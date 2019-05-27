@@ -76,6 +76,7 @@ namespace TodoApp.Controllers
 
 			try
 			{
+				// everything below is DAL if else
 				using (TodoAppEntities entities = new TodoAppEntities())
 				{
 					var entity = entities.Todos.FirstOrDefault(tod => tod.id == id);
