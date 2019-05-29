@@ -9,7 +9,7 @@ namespace BLL.Interfaces
 {
 	public interface ITodoBLL
 	{
-		bool ValidateTodo(TodoDTO todo);
+		bool ValidateTodo(TodoDTO todo, string method);
 	}
 
 }

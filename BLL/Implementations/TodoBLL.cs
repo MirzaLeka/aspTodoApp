@@ -10,16 +10,33 @@ namespace BLL.Implementations
 {
 	public class TodoBLL : ITodoBLL
 	{
-		public bool ValidateTodo(TodoDTO todo)
+		public bool ValidateTodo(TodoDTO todo, string method)
 		{
-			if (!ValidateTodoId(todo.id))
-			{
-				return false;
-			}
 
-			if (!ValidateTodoProperties(todo.todo_text, todo.completed))
+			switch(method)
 			{
-				return false;
+				case "POST":
+					if (!ValidateTodoText(todo.todo_text))
+					{
+						return false;
+					}
+				break;
+				case "PUT":
+					if (!ValidateTodoId(todo.id))
+					{
+						return false;
+					}
+					if (!ValidateTodoProperties(todo.todo_text, todo.completed))
+					{
+						return false;
+					}
+					break;
+				default:
+					if (!ValidateTodoId(todo.id))
+					{
+						return false;
+					}
+				break;
 			}
 
 			return true;
@@ -35,11 +52,21 @@ namespace BLL.Implementations
 			return true;
 		}
 
+		public bool ValidateTodoText(string text)
+		{
+			if (text == "")
+			{
+				throw new Exception();
+			}
+
+			return true;
+		}
+
 		public bool ValidateTodoProperties(string text, bool ?completed)
 		{
-			if (text == null && completed == null)
+			if (text == "" && completed == null)
 			{
-				return false;
+				throw new Exception();
 			}
 
 			return true;

@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Web.Http;
+using BLL.Interfaces;
 using DAL;
+using DTO;
 
 namespace TodoApp.Controllers
 {
     public class TodoController : ApiController
     {
+		private readonly ITodoBLL _todoBLL;
+
+		public TodoController(ITodoBLL todoBLL)
+		{
+			_todoBLL = todoBLL;
+		}
 
         public IEnumerable<Todo> GetAllTodos()
         {
@@ -20,9 +28,14 @@ namespace TodoApp.Controllers
 
 		public IHttpActionResult GetOneTodo(int id)
 		{
-			if (id < 1)
+			string method = "GET";
+
+			TodoDTO todoDto = new TodoDTO();
+			todoDto.id = id;
+
+			if (!_todoBLL.ValidateTodo(todoDto, method)) 
 			{
-				throw new ArgumentException();
+				return BadRequest();
 			}
 
 			using (TodoAppEntities entities = new TodoAppEntities())
@@ -39,10 +52,14 @@ namespace TodoApp.Controllers
 		[HttpPost]
 		public IHttpActionResult AddTodo([FromBody] Todo todo)
 		{
+			string method = "POST";
 
-			if (todo.todo_text == null)
+			TodoDTO todoDto = new TodoDTO();
+			todoDto.todo_text = todo.todo_text;
+
+			if (!_todoBLL.ValidateTodo(todoDto, method))
 			{
-				return Content(HttpStatusCode.BadRequest, "Todo requires text");
+				return BadRequest();
 			}
 
 			try
@@ -63,15 +80,16 @@ namespace TodoApp.Controllers
 		[HttpPut]
 		public IHttpActionResult UpdateTodo(int id, [FromBody] Todo todo)
 		{
+			string method = "PUT";
 
-			if (id < 1)
-			{
-				throw new ArgumentException();
-			}
+			TodoDTO todoDto = new TodoDTO();
+			todoDto.id = id;
+			todoDto.todo_text = todo.todo_text;
+			todoDto.completed = todo.completed;
 
-			if (todo.todo_text == null && todo.completed == null)
+			if (!_todoBLL.ValidateTodo(todoDto, method))
 			{
-				return Content(HttpStatusCode.BadRequest, "Something went wrong");
+				return BadRequest();
 			}
 
 			try
@@ -98,7 +116,7 @@ namespace TodoApp.Controllers
 						entity.completed_at = DateTime.Now;
 					} else
 					{
-						entity.completed = todo.completed;
+						entity.completed = false;
 						entity.completed_at = null;
 					}
 
@@ -117,9 +135,14 @@ namespace TodoApp.Controllers
 		public IHttpActionResult DeleteTodo(int id)
 		{
 
-			if (id < 1)
+			string method = "DELETE";
+
+			TodoDTO todoDto = new TodoDTO();
+			todoDto.id = id;
+
+			if (!_todoBLL.ValidateTodo(todoDto, method))
 			{
-				throw new ArgumentException();
+				return BadRequest();
 			}
 
 			try
