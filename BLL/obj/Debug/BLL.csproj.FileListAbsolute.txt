@@ -7,3 +7,7 @@ C:\Users\MIRZA\source\repos\TodoApp\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.c
 C:\Users\MIRZA\source\repos\TodoApp\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\MIRZA\source\repos\TodoApp\BLL\obj\Debug\BLL.dll
 C:\Users\MIRZA\source\repos\TodoApp\BLL\obj\Debug\BLL.pdb
+C:\Users\MIRZA\source\repos\TodoApp\BLL\bin\Debug\Common.dll
+C:\Users\MIRZA\source\repos\TodoApp\BLL\bin\Debug\Common.pdb
+C:\Users\MIRZA\source\repos\TodoApp\BLL\obj\Debug\BLL.csproj.GenerateResource.cache
+C:\Users\MIRZA\source\repos\TodoApp\BLL\obj\Debug\BLL.Exceptions.CustomExceptionMessage.resources

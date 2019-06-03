@@ -1,4 +1,5 @@
-﻿using BLL.Interfaces;
+﻿using BLL.Exceptions;
+using BLL.Interfaces;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -54,9 +55,9 @@ namespace BLL.Implementations
 
 		public bool ValidateTodoText(string text)
 		{
-			if (text == "")
+			if (text == "" || text == null)
 			{
-				throw new Exception();
+				throw new BLLCustomException(CustomExceptionMessage.TextRequiredException);
 			}
 
 			return true;
@@ -64,13 +65,14 @@ namespace BLL.Implementations
 
 		public bool ValidateTodoProperties(string text, bool ?completed)
 		{
-			if (text == "" && completed == null)
+			if ((text == "" || text == null) && completed == null)
 			{
-				throw new Exception();
+				throw new BLLCustomException(CustomExceptionMessage.RequiredPropertiesException);
 			}
 
 			return true;
 		}
+
 
 	}
 }

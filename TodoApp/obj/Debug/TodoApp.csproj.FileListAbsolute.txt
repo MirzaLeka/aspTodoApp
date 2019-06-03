@@ -121,3 +121,5 @@ C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\Unity.Interception.pdb
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\Unity.Interception.Configuration.pdb
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\Unity.RegistrationByConvention.pdb
 C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\Unity.ServiceLocation.pdb
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\Common.dll
+C:\Users\MIRZA\source\repos\TodoApp\TodoApp\bin\Common.pdb
